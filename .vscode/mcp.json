@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "jira": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-jira"],
+      "env": {
+        "JIRA_URL": "https://infobeans-team-f3ruyumb.atlassian.net",
+        "JIRA_USERNAME": "jitendra.mulewa@infobeans.com",
+        "JIRA_API_TOKEN": "ATATT3xFfGF0lZ9De3GAInEMCRwvjOPOOido-_0-KgghJJFtMRhq-wB3z_4w96AJiZXXXvysKHetiswUhEG9Bu53B8YOk2OWXT2XKYO8G-YlTmxg0o2CXJ4yKZO-C5ja3s_yDrCc6bReMEDtKjDEHVJO9z9HVolxvPA7ihz_6WWik_obnXrR_qs=46C85773"
+      }
+    }
+  }
+}
