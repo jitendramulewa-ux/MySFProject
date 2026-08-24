@@ -99,14 +99,21 @@ public with sharing class AccountFieldsService {
      * @return List of Account records with null or empty Account_Summary__c
      */
     public static List<Account> getAccountsWithoutSummary() {
-        return [
+        List<Account> accountsWithoutSummary = new List<Account>();
+
+        for (Account account : [
             SELECT 
                 Id,
                 Name,
                 Account_Summary__c
             FROM Account
-            WHERE Account_Summary__c = NULL
             ORDER BY Name
-        ];
+        ]) {
+            if (String.isBlank(account.Account_Summary__c)) {
+                accountsWithoutSummary.add(account);
+            }
+        }
+
+        return accountsWithoutSummary;
     }
 }
